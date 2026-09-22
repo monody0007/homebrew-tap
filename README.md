@@ -8,7 +8,7 @@ Homebrew tap for [TSLink](https://github.com/monody0007/tslink), a Tailscale-bac
 brew install --cask monody0007/tap/tslink
 ```
 
-The cask installs the `tslink` binary. Homebrew casks are macOS-only; on Linux use the `.deb` / `.rpm` / `.tar.gz` assets from the [releases page](https://github.com/monody0007/tslink/releases) or `go install github.com/monody0007/tslink@latest`.
+The cask installs the `tslink` binary and removes the `com.apple.quarantine` attribute Homebrew stamps on the download: the binary is ad-hoc signed and not notarized, and without that step macOS Gatekeeper blocks its first run. Homebrew casks are macOS-only; on Linux use the `.deb` / `.rpm` / `.tar.gz` assets from the [releases page](https://github.com/monody0007/tslink/releases) or `go install github.com/monody0007/tslink@latest`.
 
 ## How this tap is maintained
 
